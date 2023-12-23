@@ -20,11 +20,12 @@ struct Provider: AppIntentTimelineProvider {
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<DayEntry> {
         var entries: [DayEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        // Generate a timeline consisting of seven entries a day apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = DayEntry(date: entryDate, configuration: configuration)
+        for dayOffset in 0 ..< 7 {
+            let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: currentDate)!
+            let startOfDate = Calendar.current.startOfDay(for: entryDate)
+            let entry = DayEntry(date: startOfDate, configuration: configuration)
             entries.append(entry)
         }
 
@@ -44,18 +45,19 @@ struct MonthlyWidgetEntryView : View {
         ZStack {
             ContainerRelativeShape()
                 .fill(.gray.gradient)
+            
             VStack {
                 HStack(spacing: 4) {
                     Text("⛄️")
                         .font(.title)
                     Text(entry.date.weekdayDisplayFormat)
-                        .font(.title3)
+                        .font(.headline)
                         .bold()
                         .minimumScaleFactor(0.6)
                         .foregroundStyle(.black.opacity(0.5))
                     Spacer()
                 }
-                
+                .padding(.horizontal)
                 Text(entry.date.dayDisplayFormat)
                     .font(.system(size: 80, weight: .heavy))
                     .foregroundStyle(.white.opacity(0.8))
@@ -71,12 +73,16 @@ struct MonthlyWidget: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             MonthlyWidgetEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+                .containerBackground(for: .widget) { }
                 
         }
+        .configurationDisplayName("Monthly Style Widget")
+        .description("The theme of the widget changes based on month")
+        .containerBackgroundRemovable()
+        .contentMarginsDisabled()
+        .supportedFamilies([.systemSmall])
     }
 }
-
 
 extension ConfigurationAppIntent {
     fileprivate static var smiley: ConfigurationAppIntent {
