@@ -120,21 +120,3 @@ extension Date {
     DayEntry(date: .now, configuration: .smiley)
     DayEntry(date: .now, configuration: .starEyes)
 }
-
-//struct MonthlyWidget_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MonthlyWidgetEntryView(entry: DayEntry(date: dateToDisplay(month: 8, day: 14), configuration: ConfigurationAppIntent()))
-//            .previewContext(WidgetPreviewContext(family: .systemSmall))
-//            .containerBackground(for: .widget) { }
-//            
-//    }
-//    
-//    static func dateToDisplay(month: Int, day: Int) -> Date {
-//        let components = DateComponents(calendar: Calendar.current,
-//                                        year: 2023,
-//                                        month: month,
-//                                        day: day)
-//        
-//        return Calendar.current.date(from: components)!
-//    }
-//}
