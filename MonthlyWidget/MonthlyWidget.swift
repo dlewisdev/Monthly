@@ -61,6 +61,7 @@ struct MonthlyWidgetEntryView : View {
                         .bold()
                         .minimumScaleFactor(0.6)
                         .foregroundStyle(config.weekdayTextColor)
+                        .lineLimit(1)
                     Spacer()
                 }
                 .padding(.horizontal)
