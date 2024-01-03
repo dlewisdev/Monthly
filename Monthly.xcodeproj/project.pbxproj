@@ -16,7 +16,6 @@
 		719A59E62B377C8300E0524F /* MonthlyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59E52B377C8300E0524F /* MonthlyWidgetBundle.swift */; };
 		719A59E82B377C8300E0524F /* MonthlyWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59E72B377C8300E0524F /* MonthlyWidgetLiveActivity.swift */; };
 		719A59EA2B377C8300E0524F /* MonthlyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59E92B377C8300E0524F /* MonthlyWidget.swift */; };
-		719A59EC2B377C8300E0524F /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59EB2B377C8300E0524F /* AppIntent.swift */; };
 		719A59EE2B377C8400E0524F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719A59ED2B377C8400E0524F /* Assets.xcassets */; };
 		719A59F22B377C8400E0524F /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 719A59DE2B377C8300E0524F /* MonthlyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		719A59F92B37A68600E0524F /* MonthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59F72B37A67A00E0524F /* MonthConfig.swift */; };
@@ -59,7 +58,6 @@
 		719A59E52B377C8300E0524F /* MonthlyWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWidgetBundle.swift; sourceTree = "<group>"; };
 		719A59E72B377C8300E0524F /* MonthlyWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWidgetLiveActivity.swift; sourceTree = "<group>"; };
 		719A59E92B377C8300E0524F /* MonthlyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWidget.swift; sourceTree = "<group>"; };
-		719A59EB2B377C8300E0524F /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		719A59ED2B377C8400E0524F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719A59EF2B377C8400E0524F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		719A59F72B37A67A00E0524F /* MonthConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthConfig.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				719A59E52B377C8300E0524F /* MonthlyWidgetBundle.swift */,
 				719A59E72B377C8300E0524F /* MonthlyWidgetLiveActivity.swift */,
 				719A59E92B377C8300E0524F /* MonthlyWidget.swift */,
-				719A59EB2B377C8300E0524F /* AppIntent.swift */,
 				719A59F72B37A67A00E0524F /* MonthConfig.swift */,
 				719A59FA2B37A8BB00E0524F /* Colors+ext.swift */,
 				719A59ED2B377C8400E0524F /* Assets.xcassets */,
@@ -260,7 +257,6 @@
 			files = (
 				719A59F92B37A68600E0524F /* MonthConfig.swift in Sources */,
 				719A59EA2B377C8300E0524F /* MonthlyWidget.swift in Sources */,
-				719A59EC2B377C8300E0524F /* AppIntent.swift in Sources */,
 				719A59FC2B37A8CA00E0524F /* Colors+ext.swift in Sources */,
 				719A59E82B377C8300E0524F /* MonthlyWidgetLiveActivity.swift in Sources */,
 				719A59E62B377C8300E0524F /* MonthlyWidgetBundle.swift in Sources */,
